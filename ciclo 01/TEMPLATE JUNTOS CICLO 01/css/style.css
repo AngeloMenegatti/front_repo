@@ -1,0 +1,103 @@
+body{
+    background-color:#FDFF9A;/*cor*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#principal {
+    width: 1440px;
+    border: 1px solid black;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    width: 700px;
+    /* border: 1px solid black; */
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul li{
+    font-weight: 600px;/*coloquei so para que o css não fique amarelo*/
+    /* background-color: #3d3d25;
+    padding: 8px 24px; O primeiro valor aplica encima e o outro dos lados
+    border-radius: 12px;*/
+} 
+ul li a {
+    background-color: #3d3d25;
+    padding: 8px 24px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+ul li a:hover{
+    /* background-color: #3d3d25; */
+    color: aqua;
+    text-decoration: underline;
+}
+
+/*aqui começa o main, conteudo principal*/
+
+main{
+    border: 2px solid red;
+}
+section{
+    border: 2px solid blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.destaque{
+    width: 460px;
+    border: 2px solid pink;
+}
+h1{
+    font-size: 20px;
+}
+.pai-img-e-p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section img{
+    width: 250px;
+}
+p{
+    font-size: 20px;
+    width: 200px;
+}
+
+#miranha{
+    border: 2px solid black; 
+    width: 940px;
+    display: flex;
+    justify-content: space-between;
+
+    p{
+        width: 490px;
+    }
+}
+/* #miranha p */ /*outra maneira de */
+
+/* #texto-miranha{
+    margin-left: ;
+} */
+
+aside{
+    background-color: aqua;
+    width: 500px;
+}
+
+#pai-central{
+    display: flex;
+}

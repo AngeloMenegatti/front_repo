@@ -1,0 +1,319 @@
+=====================================================
+GUIA RAPIDO: O QUE CADA COISA FAZ NO HTML E NO CSS
+=====================================================
+
+
+#####################################################
+PARTE 1 - HTML (a estrutura da pagina)
+#####################################################
+
+--- ESTRUTURA BASICA ---
+
+<!DOCTYPE html>   = diz ao navegador que o arquivo e HTML5
+<html>            = envolve a pagina inteira
+<head>            = parte invisivel: configuracoes, titulo da aba, link do CSS
+<body>            = parte visivel: tudo que aparece na tela
+<title>           = titulo que aparece na ABA do navegador
+<meta charset>    = define a codificacao (UTF-8 deixa os acentos certos)
+<meta viewport>   = faz a pagina se ajustar no celular
+<link>            = liga um arquivo externo (ex: o CSS)
+<style>           = escreve CSS dentro do proprio HTML
+<script>          = coloca JavaScript na pagina
+
+
+--- TEXTOS ---
+
+<h1>              = titulo principal (o maior, so use um por pagina)
+<h2>              = subtitulo
+<h3> ate <h6>     = titulos menores, em ordem decrescente
+<p>               = paragrafo
+<br>              = quebra de linha
+<hr>              = linha horizontal separando partes
+<strong>          = texto em negrito (com importancia)
+<b>               = negrito (so visual)
+<em>              = texto em italico (com enfase)
+<i>               = italico (so visual)
+<u>               = texto sublinhado
+<mark>            = texto marcado (fundo amarelo)
+<small>           = texto menor
+<span>            = pedaco de texto para estilizar sem quebrar a linha
+<blockquote>      = citacao em bloco
+<code>            = texto de codigo
+<pre>             = mantem espacos e quebras exatamente como escritos
+
+
+--- LINKS E IMAGENS ---
+
+<a href="">       = link (leva para outra pagina ou site)
+<img src="" alt=""> = imagem (src = caminho, alt = descricao)
+
+
+--- LISTAS ---
+
+<ul>              = lista sem ordem (com bolinhas)
+<ol>              = lista ordenada (1, 2, 3...)
+<li>              = cada item da lista
+
+
+--- TABELAS ---
+
+<table>           = tabela
+<tr>              = linha da tabela
+<th>              = celula de cabecalho (negrito e centralizada)
+<td>              = celula comum
+<thead>           = agrupa o cabecalho da tabela
+<tbody>           = agrupa o corpo da tabela
+
+
+--- ORGANIZACAO DA PAGINA (semanticas) ---
+
+<div>             = caixa generica (agrupa elementos)
+<header>          = topo da pagina ou de uma secao
+<nav>             = menu de navegacao
+<main>            = conteudo principal
+<section>         = secao do conteudo
+<article>         = conteudo independente (ex: post de blog)
+<aside>           = conteudo lateral
+<footer>          = rodape
+
+
+--- FORMULARIOS ---
+
+<form>            = formulario
+<label>           = nome/legenda de um campo
+<input>           = campo de entrada (texto, senha, email, checkbox...)
+<textarea>        = campo de texto grande (varias linhas)
+<select>          = lista suspensa
+<option>          = cada opcao da lista suspensa
+<button>          = botao
+
+Tipos do <input type="">:
+  text      = texto comum
+  password  = senha (esconde os caracteres)
+  email     = email
+  number    = numeros
+  checkbox  = caixinha de marcar
+  radio     = escolher so uma opcao
+  submit    = botao de enviar
+  date      = data
+
+
+--- ATRIBUTOS (ficam dentro da tag) ---
+
+class=""          = nome de grupo para estilizar varios elementos
+id=""             = nome unico para UM elemento
+href=""           = endereco do link
+src=""            = caminho da imagem/arquivo
+alt=""            = texto alternativo da imagem
+style=""          = CSS direto na tag
+placeholder=""    = texto de dica dentro do campo
+required          = campo obrigatorio
+target="_blank"   = abre o link em nova aba
+type=""           = tipo do input ou botao
+name=""           = nome do campo (usado no envio do formulario)
+value=""          = valor do campo
+
+
+#####################################################
+PARTE 2 - CSS (o visual da pagina)
+#####################################################
+
+--- COMO ESCREVER CSS ---
+
+seletor {
+    propriedade: valor;
+}
+
+Exemplo:
+h1 {
+    color: blue;
+}
+(todo h1 fica azul)
+
+
+--- SELETORES (quem vai ser estilizado) ---
+
+h1                = todas as tags h1
+.nome             = todos os elementos com class="nome"
+#nome             = o elemento com id="nome"
+*                 = todos os elementos
+div p             = todo p que esta dentro de um div
+div > p           = so p que e filho direto do div
+a:hover           = link quando o mouse passa por cima
+button:active     = botao quando esta sendo clicado
+input:focus       = campo quando esta selecionado
+p:first-child     = primeiro p dentro do pai
+li:nth-child(2)   = o segundo li
+
+
+--- CORES E FUNDO ---
+
+color             = cor do texto
+background-color  = cor de fundo
+background-image  = imagem de fundo
+background-size   = tamanho da imagem de fundo (cover, contain)
+background-repeat = se a imagem de fundo repete
+opacity           = transparencia (0 a 1)
+
+Formas de escrever cor:
+  red                = pelo nome
+  #ff0000            = hexadecimal
+  rgb(255, 0, 0)     = RGB
+  rgba(255,0,0,0.5)  = RGB com transparencia
+
+
+--- TEXTO ---
+
+font-family       = tipo de fonte (Arial, Verdana...)
+font-size         = tamanho da letra (px, em, rem)
+font-weight       = grossura (normal, bold, 100 a 900)
+font-style        = italico (italic)
+text-align        = alinhamento (left, center, right, justify)
+text-decoration   = sublinhado/riscado (underline, none, line-through)
+text-transform    = maiuscula/minuscula (uppercase, lowercase, capitalize)
+line-height       = altura da linha (espaco entre linhas)
+letter-spacing    = espaco entre as letras
+text-shadow       = sombra no texto
+
+
+--- TAMANHO ---
+
+width             = largura
+height            = altura
+max-width         = largura maxima
+min-width         = largura minima
+max-height        = altura maxima
+min-height        = altura minima
+
+Unidades:
+  px   = pixels (tamanho fixo)
+  %    = porcentagem do elemento pai
+  em   = relativo ao tamanho da fonte do pai
+  rem  = relativo ao tamanho da fonte da pagina
+  vw   = % da largura da tela
+  vh   = % da altura da tela
+
+
+--- ESPACOS (o modelo de caixa) ---
+
+Todo elemento e uma caixa com 4 camadas, de dentro pra fora:
+  conteudo -> padding -> border -> margin
+
+padding           = espaco DENTRO da caixa (entre conteudo e borda)
+margin            = espaco FORA da caixa (entre ela e outros elementos)
+border            = borda
+border-radius     = bordas arredondadas
+box-sizing        = border-box faz width incluir padding e borda
+
+Variacoes: padding-top, padding-right, padding-bottom, padding-left
+           (o mesmo vale para margin)
+
+Atalho: padding: 10px 20px;  = 10px em cima/baixo, 20px nos lados
+        margin: 0 auto;      = centraliza a caixa na horizontal
+
+Borda: border: 2px solid black;  (espessura, estilo, cor)
+Estilos de borda: solid, dashed, dotted, double, none
+
+
+--- SOMBRAS ---
+
+box-shadow        = sombra na caixa
+text-shadow       = sombra no texto
+
+
+--- POSICAO E EXIBICAO ---
+
+display           = como o elemento se comporta
+   block          = ocupa a linha toda
+   inline         = so o tamanho do conteudo, fica na mesma linha
+   inline-block   = fica na linha mas aceita largura e altura
+   none           = esconde o elemento
+   flex           = ativa o Flexbox
+   grid           = ativa o Grid
+
+position          = tipo de posicionamento
+   static         = normal (padrao)
+   relative       = relativo a posicao original
+   absolute       = relativo ao pai posicionado
+   fixed          = fixo na tela (nao some ao rolar)
+   sticky         = gruda ao rolar a pagina
+
+top / right / bottom / left = distancia usada com position
+z-index           = ordem de sobreposicao (maior fica na frente)
+overflow          = o que fazer se o conteudo passar da caixa (hidden, scroll, auto)
+float             = joga o elemento para esquerda/direita
+visibility        = esconde mas mantem o espaco (hidden)
+
+
+--- FLEXBOX (organizar elementos em linha ou coluna) ---
+
+Vai no PAI:
+display: flex;
+flex-direction    = direcao (row = linha, column = coluna)
+justify-content   = alinha no eixo principal (center, space-between, space-around, flex-start, flex-end)
+align-items       = alinha no eixo cruzado (center, flex-start, flex-end, stretch)
+flex-wrap         = permite quebrar linha (wrap)
+gap               = espaco entre os itens
+
+Vai no FILHO:
+flex              = quanto o item cresce/encolhe
+align-self        = alinhamento so desse item
+
+
+--- GRID (organizar em linhas e colunas, tipo tabela) ---
+
+display: grid;
+grid-template-columns = define as colunas (ex: 1fr 1fr 1fr)
+grid-template-rows    = define as linhas
+gap                   = espaco entre as celulas
+grid-column           = quantas colunas o item ocupa
+grid-row              = quantas linhas o item ocupa
+
+
+--- EFEITOS E ANIMACOES ---
+
+transition        = suaviza uma mudanca (ex: transition: 0.3s;)
+transform         = muda o elemento (rotate, scale, translate)
+animation         = aplica uma animacao
+@keyframes        = define os passos da animacao
+cursor            = formato do mouse (pointer = maozinha)
+filter            = efeitos (blur, brightness, grayscale)
+
+
+--- RESPONSIVIDADE ---
+
+@media (max-width: 768px) {
+    ...
+}
+= regras que so valem quando a tela e menor que 768px (celular/tablet)
+
+
+--- LISTAS ---
+
+list-style        = tipo da marcacao (none tira as bolinhas)
+
+
+--- OUTROS ---
+
+:root             = onde se guardam variaveis CSS
+--minha-cor: red; = cria uma variavel
+var(--minha-cor)  = usa a variavel
+!important        = forca uma regra a ganhar das outras
+/* texto */       = comentario no CSS
+<!-- texto -->     = comentario no HTML
+
+
+#####################################################
+EXEMPLO JUNTANDO TUDO
+#####################################################
+
+HTML:
+<h1 class="titulo">Meu Site</h1>
+<p>Bem-vindo!</p>
+
+CSS:
+.titulo {
+    color: blue;          /* texto azul */
+    text-align: center;   /* centralizado */
+    font-size: 32px;      /* tamanho da letra */
+}
